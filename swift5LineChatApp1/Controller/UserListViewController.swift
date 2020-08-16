@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseFirestore
+import Nuke
+import FirebaseAuth
 
 class UserListViewController: UIViewController {
     
@@ -18,6 +20,7 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchUserInfoFromFirestore()
         userListTableView.delegate = self
         userListTableView.dataSource = self
         
@@ -34,14 +37,14 @@ class UserListViewController: UIViewController {
                 let dic = snapshot.data()
                 let user = User.init(dic: dic)
                 
-                self.users.append(user)
-                self.userListTableView.reloadData()
-                
-                self.users.forEach { (user) in
-                    print("user.username:",user.username)
+                guard let uid = Auth.auth().currentUser?.uid else{return}
+                if uid == snapshot.documentID{
+                    return
                 }
                 
-    //            print("data:\(dic)")
+                self.users.append(user)
+                self.userListTableView.reloadData()
+              
                 
             })
         }
@@ -55,11 +58,12 @@ extension UserListViewController:UITableViewDelegate,UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = userListTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! UserListCell
+        cell.user = users[indexPath.row]
         return cell
     }
     
@@ -70,8 +74,10 @@ class UserListCell:UITableViewCell{
     
     var user:User?{
         didSet{
-//            userImageView.image = user?.profileImageUrl
             userTextLabel.text = user?.username
+            if let url = URL(string: user?.profileImageUrl ?? ""){
+                Nuke.loadImage(with: url, into: userImageView)
+            }
             
         }
     }
@@ -82,6 +88,7 @@ class UserListCell:UITableViewCell{
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        userImageView.layer.cornerRadius = 25
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -51,14 +51,7 @@ class ChatListViewController: UIViewController {
         let nav = UINavigationController(rootViewController: userListViewContoroller)
         self.present(nav, animated: true, completion: nil)
     }
-    
-    
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        fetchUserInfoFromFirestore()
-    }
     
 
 private func fetchUserInfoFromFirestore(){
