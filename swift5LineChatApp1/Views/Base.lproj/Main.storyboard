@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TmV-Mu-8kN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uMc-0d-YqD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -90,6 +90,139 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLk-zq-rBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+        <!--Sing Up View Controller-->
+        <scene sceneID="gmK-WN-YNp">
+            <objects>
+                <viewController id="uMc-0d-YqD" customClass="SingUpViewController" customModule="swift5LineChatApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOz-o5-r0G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RK-GT-ePw">
+                                <rect key="frame" x="122" y="114" width="170" height="170"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="98z-7T-JQ8"/>
+                                    <constraint firstAttribute="width" secondItem="5RK-GT-ePw" secondAttribute="height" multiplier="1:1" id="fvt-XD-BLv"/>
+                                </constraints>
+                                <state key="normal" title="プロフィール画像">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-Mk-FGJ">
+                                <rect key="frame" x="57" y="304" width="300" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-rH-bMh">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mz7-DC-StD">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CVQ-4a-UGu">
+                                                <rect key="frame" x="0.0" y="20.5" width="300" height="49.5"/>
+                                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.099699668599834299" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KI4-KT-l2g">
+                                        <rect key="frame" x="0.0" y="90" width="300" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5q-m6-8Wm">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-jm-Iyi">
+                                                <rect key="frame" x="0.0" y="20.5" width="300" height="49.5"/>
+                                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.099699668599999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oHm-Gk-vKR">
+                                        <rect key="frame" x="0.0" y="180" width="300" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP9-vV-WCr">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KgS-kp-Idn">
+                                                <rect key="frame" x="0.0" y="20.5" width="300" height="49.5"/>
+                                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.099699668599999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="B20-bd-7wz"/>
+                                    <constraint firstAttribute="height" constant="250" id="dRQ-Sd-VOd"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW4-vO-NDN">
+                                <rect key="frame" x="127" y="584" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.45157619239846736" green="1" blue="0.5306609238014538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="GLt-0V-89W"/>
+                                    <constraint firstAttribute="height" constant="40" id="kGZ-0R-f4I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="uMc-0d-YqD" eventType="touchUpInside" id="vd7-nY-CNQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-vH-qXx">
+                                <rect key="frame" x="107" y="664" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GFY-a7-rIv"/>
+                                    <constraint firstAttribute="height" constant="40" id="p8n-LA-1WS"/>
+                                </constraints>
+                                <state key="normal" title="既にアカウントお持ちの方"/>
+                                <connections>
+                                    <action selector="userTapped:" destination="uMc-0d-YqD" eventType="touchUpInside" id="oSp-se-8uS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5RK-GT-ePw" firstAttribute="top" secondItem="9R0-c6-exT" secondAttribute="top" constant="70" id="1U2-g5-STP"/>
+                            <constraint firstItem="kYZ-Mk-FGJ" firstAttribute="centerX" secondItem="qOz-o5-r0G" secondAttribute="centerX" id="CSZ-7a-l9P"/>
+                            <constraint firstItem="N6X-vH-qXx" firstAttribute="top" secondItem="iW4-vO-NDN" secondAttribute="bottom" constant="40" id="Lr4-22-DQj"/>
+                            <constraint firstItem="kYZ-Mk-FGJ" firstAttribute="top" secondItem="5RK-GT-ePw" secondAttribute="bottom" constant="20" id="VMy-m9-ZZb"/>
+                            <constraint firstItem="N6X-vH-qXx" firstAttribute="centerX" secondItem="qOz-o5-r0G" secondAttribute="centerX" id="a77-oU-Uof"/>
+                            <constraint firstItem="iW4-vO-NDN" firstAttribute="top" secondItem="kYZ-Mk-FGJ" secondAttribute="bottom" constant="30" id="b5c-UC-9yr"/>
+                            <constraint firstItem="5RK-GT-ePw" firstAttribute="centerX" secondItem="qOz-o5-r0G" secondAttribute="centerX" id="pCq-40-IKE"/>
+                            <constraint firstItem="iW4-vO-NDN" firstAttribute="centerX" secondItem="qOz-o5-r0G" secondAttribute="centerX" id="q1e-NH-e0s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9R0-c6-exT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8pX-CN-gEX"/>
+                    <connections>
+                        <outlet property="alreadyHaveAccountButton" destination="N6X-vH-qXx" id="DNN-s9-d66"/>
+                        <outlet property="mailTextField" destination="CVQ-4a-UGu" id="MNA-LA-QV9"/>
+                        <outlet property="passwordTextField" destination="IRb-jm-Iyi" id="Krd-bP-wPd"/>
+                        <outlet property="registerButton" destination="iW4-vO-NDN" id="r4T-LS-8SP"/>
+                        <outlet property="userImageView" destination="5RK-GT-ePw" id="ny4-hC-g0w"/>
+                        <outlet property="usernameTextField" destination="KgS-kp-Idn" id="j2p-Su-UI9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDR-V2-dD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="848.4375"/>
         </scene>
     </scenes>
 </document>
