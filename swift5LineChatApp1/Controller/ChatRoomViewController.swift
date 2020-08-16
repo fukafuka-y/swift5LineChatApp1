@@ -15,7 +15,7 @@ class ChatRoomViewController: UIViewController{
    
     private var chatInputAccessoryView:ChatInputAccessoryView = {
         let view = ChatInputAccessoryView()
-        view.frame = .init(x:0, y:0, width:view.frame.width, height:view.frame.height)
+        view.frame = .init(x:0, y:0, width:view.frame.width, height:100)
         return view
         
     }()
