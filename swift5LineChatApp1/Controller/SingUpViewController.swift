@@ -24,6 +24,7 @@ class SingUpViewController:UIViewController{
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +56,7 @@ class SingUpViewController:UIViewController{
                 print("Firebasestorangeの情報の保存に失敗しました\(err)")
                 return
             }
-            print("Firebasestorangeの情報の保存しました")
+//            print("Firebasestorangeの情報の保存しました")
             storangeRef.downloadURL { (url, err) in
                 if let err = err{
                     print("Firebasestorangeのダウンロードに失敗しました")
@@ -77,7 +78,7 @@ class SingUpViewController:UIViewController{
                        print("Authの情報の取得に失敗しました。\(err)")
                        return
                    }
-                   print("Authの情報を保存しました")
+//                   print("Authの情報を保存しました")
 
 
                guard let uid = res?.user.uid else {return}
@@ -96,6 +97,7 @@ class SingUpViewController:UIViewController{
                            return
                        }
                    print("Firestoreへの情報の保存が成功しました")
+                    self.dismiss(animated: true, completion: nil)
                    }
                    
                

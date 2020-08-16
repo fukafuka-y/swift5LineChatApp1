@@ -15,6 +15,17 @@ class ChatListCell: UITableViewCell {
     @IBOutlet weak var yourNameLabel: UILabel!
     @IBOutlet weak var dateTextLabel: UILabel!
     
+    var user:User?{
+        didSet{
+            if let user = user{
+                yourNameLabel.text = user.username
+//            userImageView.image = user?.profileImageUrl
+                dateTextLabel.text = dateFormatterDateLabel(date: user.createdAt.dateValue())
+                lastMessageLabel.text = user.email
+            }
+        }
+    }
+    
     
     
     override func awakeFromNib() {
@@ -28,6 +39,14 @@ class ChatListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func dateFormatterDateLabel(date:Date)->String{
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "ja_JP")
+        return formatter.string(from: date)
     }
     
 }

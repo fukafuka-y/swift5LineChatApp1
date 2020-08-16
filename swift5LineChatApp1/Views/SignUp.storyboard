@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sing Up View Controller-->
+        <scene sceneID="Wnm-8j-aB6">
+            <objects>
+                <viewController storyboardIdentifier="SingUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nli-Rm-FDi" customClass="SingUpViewController" customModule="swift5LineChatApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3U-So-iqH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRy-tz-tBY">
+                                <rect key="frame" x="122" y="114" width="170" height="170"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="5LL-05-WkK"/>
+                                    <constraint firstAttribute="width" secondItem="tRy-tz-tBY" secondAttribute="height" multiplier="1:1" id="Fax-CS-Chn"/>
+                                </constraints>
+                                <state key="normal" title="プロフィール画像">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BXj-t9-e9V">
+                                <rect key="frame" x="57" y="304" width="300" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-cO-qeJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-il-e9f">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68v-Fv-0fw">
+                                                <rect key="frame" x="0.0" y="20.5" width="300" height="49.5"/>
+                                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.099699668599999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j8n-cK-jMi">
+                                        <rect key="frame" x="0.0" y="90" width="300" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq9-83-F0S">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRA-Do-g02">
+                                                <rect key="frame" x="0.0" y="20.5" width="300" height="49.5"/>
+                                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.099699668599999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="abM-Zl-3ME">
+                                        <rect key="frame" x="0.0" y="180" width="300" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6E-aB-i0F">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhZ-Ep-fRN">
+                                                <rect key="frame" x="0.0" y="20.5" width="300" height="49.5"/>
+                                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.099699668599999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Tso-ah-i5i"/>
+                                    <constraint firstAttribute="width" constant="300" id="tOE-rT-AJB"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-Pz-NiM">
+                                <rect key="frame" x="127" y="584" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.45157619240000002" green="1" blue="0.53066092379999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Hqt-aa-YHU"/>
+                                    <constraint firstAttribute="width" constant="160" id="is3-lt-eui"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="nli-Rm-FDi" eventType="touchUpInside" id="ZDm-Om-hJK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZL-Hi-DFQ">
+                                <rect key="frame" x="107" y="664" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ql7-aR-GL6"/>
+                                    <constraint firstAttribute="height" constant="40" id="uU8-Tb-HfR"/>
+                                </constraints>
+                                <state key="normal" title="既にアカウントお持ちの方"/>
+                                <connections>
+                                    <action selector="userTapped:" destination="nli-Rm-FDi" eventType="touchUpInside" id="0bJ-BZ-5sd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DZL-Hi-DFQ" firstAttribute="centerX" secondItem="j3U-So-iqH" secondAttribute="centerX" id="4do-Ez-nSv"/>
+                            <constraint firstItem="Y5K-Pz-NiM" firstAttribute="top" secondItem="BXj-t9-e9V" secondAttribute="bottom" constant="30" id="5fy-73-Aa8"/>
+                            <constraint firstItem="tRy-tz-tBY" firstAttribute="top" secondItem="sva-UW-rtd" secondAttribute="top" constant="70" id="Qt4-Og-dBv"/>
+                            <constraint firstItem="BXj-t9-e9V" firstAttribute="centerX" secondItem="j3U-So-iqH" secondAttribute="centerX" id="Scw-ad-n9w"/>
+                            <constraint firstItem="DZL-Hi-DFQ" firstAttribute="top" secondItem="Y5K-Pz-NiM" secondAttribute="bottom" constant="40" id="TaG-Nb-G95"/>
+                            <constraint firstItem="BXj-t9-e9V" firstAttribute="top" secondItem="tRy-tz-tBY" secondAttribute="bottom" constant="20" id="UcT-Sp-aKG"/>
+                            <constraint firstItem="Y5K-Pz-NiM" firstAttribute="centerX" secondItem="j3U-So-iqH" secondAttribute="centerX" id="eX1-Oj-sIQ"/>
+                            <constraint firstItem="tRy-tz-tBY" firstAttribute="centerX" secondItem="j3U-So-iqH" secondAttribute="centerX" id="pt3-uN-sUE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sva-UW-rtd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TqD-bV-Uv6"/>
+                    <connections>
+                        <outlet property="alreadyHaveAccountButton" destination="DZL-Hi-DFQ" id="lvF-LT-hEo"/>
+                        <outlet property="mailTextField" destination="68v-Fv-0fw" id="kHG-R7-vdT"/>
+                        <outlet property="passwordTextField" destination="ZRA-Do-g02" id="pI5-wO-4xW"/>
+                        <outlet property="registerButton" destination="Y5K-Pz-NiM" id="oXa-Zf-U7m"/>
+                        <outlet property="userImageView" destination="tRy-tz-tBY" id="vra-WX-0Bg"/>
+                        <outlet property="usernameTextField" destination="AhZ-Ep-fRN" id="LOk-6P-vcT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5d-Ko-UbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="348"/>
+        </scene>
+    </scenes>
+</document>
