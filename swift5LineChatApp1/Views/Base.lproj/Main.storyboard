@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uMc-0d-YqD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TmV-Mu-8kN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -35,7 +35,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X7d-03-nOu"/>
+                    <navigationItem key="navigationItem" id="X7d-03-nOu">
+                        <barButtonItem key="leftBarButtonItem" title="ログアウト" id="BmA-Vf-ERE">
+                            <connections>
+                                <segue destination="uMc-0d-YqD" kind="show" id="sgX-iD-Md8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chatListTableView" destination="gxf-SH-4E2" id="jZX-e0-Omt"/>
                         <segue destination="Ndr-xo-n8k" kind="show" identifier="chatRoom" id="Bxw-Uc-nr3"/>
@@ -100,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RK-GT-ePw">
-                                <rect key="frame" x="122" y="114" width="170" height="170"/>
+                                <rect key="frame" x="122" y="158" width="170" height="170"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="98z-7T-JQ8"/>
@@ -111,7 +117,7 @@
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-Mk-FGJ">
-                                <rect key="frame" x="57" y="304" width="300" height="250"/>
+                                <rect key="frame" x="57" y="348" width="300" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-rH-bMh">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
@@ -171,7 +177,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW4-vO-NDN">
-                                <rect key="frame" x="127" y="584" width="160" height="40"/>
+                                <rect key="frame" x="127" y="628" width="160" height="40"/>
                                 <color key="backgroundColor" red="0.45157619239846736" green="1" blue="0.5306609238014538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="GLt-0V-89W"/>
@@ -186,7 +192,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-vH-qXx">
-                                <rect key="frame" x="107" y="664" width="200" height="40"/>
+                                <rect key="frame" x="107" y="708" width="200" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GFY-a7-rIv"/>
                                     <constraint firstAttribute="height" constant="40" id="p8n-LA-1WS"/>

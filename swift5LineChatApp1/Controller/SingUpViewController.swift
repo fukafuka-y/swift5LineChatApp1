@@ -53,13 +53,29 @@ class SingUpViewController:UIViewController{
                 return
             }
             print("Authの情報を保存しました")
-        }
-//
-        guard let uid = res.user.uid
-        Firestore.firestore().collection("user").document(<#T##documentPath: String##String#>)
-        
-    }
 
+
+        guard let uid = res?.user.uid else {return}
+        guard let username = self.usernameTextField.text else {return}
+        let docData = [
+            "email":email,
+            "username":username,
+            "createdAt":Timestamp()
+            ] as [String : Any]
+            
+            
+            Firestore.firestore().collection("user").document(uid).setData(docData) { (err) in
+                if let err = err{
+                    print("データの保存に失敗しました:\(err)")
+                    return
+                }
+            print("Firestoreへの情報の保存が成功しました")
+            self.dismiss(animated: true, completion: nil)
+            }
+            
+        
+     }
+    }
     @objc private func tapalreadyHaveAccountButton(){
     
     }
