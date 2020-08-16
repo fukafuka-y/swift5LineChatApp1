@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class SingUpViewController:UIViewController{
     
@@ -30,11 +33,35 @@ class SingUpViewController:UIViewController{
         registerButton.isEnabled = false
         registerButton.backgroundColor = UIColor.rgb(red: 100, green: 100, blue: 100)
         
+        
         userImageView.addTarget(self, action: #selector(tapImageView), for: .touchUpInside)
+        registerButton.addTarget(self, action: #selector(tapRegisterButton), for: .touchUpInside)
+        alreadyHaveAccountButton.addTarget(self, action: #selector(tapalreadyHaveAccountButton), for: .touchUpInside)
         
         mailTextField.delegate = self
         passwordTextField.delegate = self
         usernameTextField.delegate = self
+    }
+    
+    @objc private func tapRegisterButton(){
+        guard let email = mailTextField.text else{return}
+        guard let password = passwordTextField.text else{return}
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
+            if let err = err{
+                print("Authの情報の取得に失敗しました。\(err)")
+                return
+            }
+            print("Authの情報を保存しました")
+        }
+//
+        guard let uid = res.user.uid
+        Firestore.firestore().collection("user").document(<#T##documentPath: String##String#>)
+        
+    }
+
+    @objc private func tapalreadyHaveAccountButton(){
+    
     }
   
     @objc private func tapImageView(){
